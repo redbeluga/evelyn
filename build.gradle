@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+apply plugin:'application'
+mainClassName = 'me.evelyn.Evelyn'
+
+group 'me.redbeluga'
+version '1.0'
+
+sourceCompatibility = JavaVersion.VERSION_14
+
+jar {
+    manifest {
+        attributes(
+                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+                'Main-Class': 'evelyn.Evelyn'
+        )
+    }
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation group: 'net.dv8tion', name: 'JDA', version: '4.2.0_214'
+    implementation group: 'com.jagrosh', name: 'jda-utilities', version: '3.0.4'
+    implementation group: 'me.duncte123', name: 'botCommons', version: '2.0.119'
+    implementation group: 'com.sedmelluq', name: 'lavaplayer', version: '1.3.55'
+    implementation group: 'com.google.apis', name: 'google-api-services-youtube', version: 'v3-rev222-1.25.0'
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    implementation group: 'io.github.cdimascio',name: 'java-dotenv', version: '5.2.2'
+}
+
+compileJava.options.encoding = 'UTF-8'
