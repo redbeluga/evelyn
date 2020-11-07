@@ -3,6 +3,8 @@ package me.evelyn;
 import me.evelyn.command.CommandContext;
 import me.evelyn.command.ICommand;
 import me.evelyn.command.commands.botcommands.PingCommand;
+import me.evelyn.command.commands.fun.JokeCommand;
+import me.evelyn.command.commands.fun.MemeCommand;
 import me.evelyn.command.commands.music.*;
 import me.evelyn.command.commands.servermanagement.DeleteCommand;
 import me.evelyn.command.commands.servermanagement.KickCommand;
@@ -19,6 +21,9 @@ public class CommandManager {
 
     public CommandManager() {
         addCommand(new PingCommand());
+
+        addCommand(new MemeCommand());
+        addCommand(new JokeCommand());
 
         addCommand(new DeleteCommand());
         addCommand(new KickCommand());

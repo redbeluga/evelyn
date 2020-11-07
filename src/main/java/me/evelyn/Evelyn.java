@@ -1,5 +1,7 @@
 package me.evelyn;
 
+import me.duncte123.botcommons.messaging.EmbedUtils;
+import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.requests.GatewayIntent;
@@ -10,7 +12,11 @@ import java.util.EnumSet;
 
 public class Evelyn {
 
-    public Evelyn() throws LoginException {
+    private Evelyn() throws LoginException {
+        EmbedUtils.setEmbedBuilder(
+                () -> new EmbedBuilder()
+                .setColor(0xf7003e)
+        );
 
         JDABuilder.createDefault(
                 Config.get("token"),
