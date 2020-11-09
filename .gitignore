@@ -1,4 +1,4 @@
-shelf/
-.idea/workspace.xml
+shelf
+.idea
 .gradle
 build
