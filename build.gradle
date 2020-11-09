@@ -4,7 +4,6 @@ plugins {
 }
 
 apply plugin:'application'
-mainClassName = 'me.evelyn.Evelyn'
 
 group 'me.redbeluga'
 version '1.0'
@@ -15,7 +14,7 @@ jar {
     manifest {
         attributes(
                 'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
-                'Main-Class': 'evelyn.Evelyn'
+                'Main-Class': 'me.evelyn.Evelyn'
         )
     }
 }
@@ -34,6 +33,9 @@ dependencies {
     implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
     implementation group: 'io.github.cdimascio', name: 'java-dotenv', version: '5.2.2'
     implementation group: 'se.michaelthelin.spotify', name: 'spotify-web-api-java', version: '6.4.1'
+
+    implementation group: 'com.zaxxer', name: 'HikariCP', version: '3.4.1'
+    implementation group: 'org.xerial', name: 'sqlite-jdbc', version: '3.30.1'
 }
 
 compileJava.options.encoding = 'UTF-8'

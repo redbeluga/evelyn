@@ -1,5 +1,7 @@
 package me.evelyn.command.commands.servermanagement;
 
+import me.evelyn.Config;
+import me.evelyn.Settings;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -77,8 +79,12 @@ public class Filter extends ListenerAdapter {
         Random rand = new Random();
         EmbedBuilder warning = new EmbedBuilder();
         warning.setColor(0xf7003e);
-        if(true) {
-            if(event.getAuthor().isBot() == false) {
+
+        final long guildId = event.getGuild().getIdLong();
+        Boolean toggle = Settings.FILTERTOGGLE.computeIfAbsent(guildId, (id) -> false);
+
+        if(toggle) {
+            if(!event.getAuthor().isBot()) {
                 int warnNum = rand.nextInt(warnings.length);
 
                 String[] messageWords = event.getMessage().getContentRaw().toLowerCase().replaceAll("[^a-zA-Z0-9]", "").split("\\s+");

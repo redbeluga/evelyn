@@ -8,6 +8,8 @@ import me.evelyn.command.commands.fun.MemeCommand;
 import me.evelyn.command.commands.music.*;
 import me.evelyn.command.commands.servermanagement.DeleteCommand;
 import me.evelyn.command.commands.servermanagement.KickCommand;
+import me.evelyn.command.commands.servermanagement.SetPrefixCommand;
+import me.evelyn.command.commands.servermanagement.ToggleFilterCommand;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
 import javax.annotation.Nullable;
@@ -38,6 +40,9 @@ public class CommandManager {
         addCommand(new QueueCommand());
         addCommand(new ClearCommand());
         addCommand(new ShuffleCommand());
+
+        addCommand(new SetPrefixCommand());
+        addCommand(new ToggleFilterCommand());
     }
 
     private void addCommand(ICommand cmd) {
@@ -63,9 +68,9 @@ public class CommandManager {
         return null;
     }
 
-    void handle(GuildMessageReceivedEvent event) {
+    void handle(GuildMessageReceivedEvent event, String prefix) {
         String[] split = event.getMessage().getContentRaw()
-                .replaceFirst("(?i)" + Pattern.quote(Config.get("prefix")), "")
+                .replaceFirst("(?i)" + Pattern.quote(prefix), "")
                 .split("\\s+");
 
         String invoke = split[0].toLowerCase();
