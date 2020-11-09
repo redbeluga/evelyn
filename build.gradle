@@ -10,8 +10,9 @@ version '1.0'
 
 sourceCompatibility = JavaVersion.VERSION_14
 
+
 application {
-    mainClassName = 'org.gradle.sample.Main'
+    mainClassName = 'me.evelyn.Evelyn'
 }
 
 jar {
