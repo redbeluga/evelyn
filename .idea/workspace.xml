@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="234a62ba-43b4-4916-be24-4d75ce20ec73" name="Default Changelist" comment="Added settings">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="evelyn" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.1.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1jo1FSRWfUfw4wxEDkn3FWbg6rY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Discord Bot\evelynCode\evelyn-gradle-rework" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Discord Bot\evelynCode\evelyn-gradle-rework" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="me.evelyn.command.commands.servermanagement" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.GetAlbumTracks">
+    <configuration name="ClientCredential" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.evelyn.spotify.ClientCredential" />
+      <module name="evelyn.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.evelyn.spotify.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Evelyn" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.evelyn.Evelyn" />
+      <module name="evelyn.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.evelyn.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetAlbumTracks" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.evelyn.spotify.GetAlbumTracks" />
+      <module name="evelyn.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.evelyn.spotify.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetPlayListTracks" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.evelyn.spotify.GetPlayListTracks" />
+      <module name="evelyn.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.evelyn.spotify.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GetAlbumTracks" />
+        <item itemvalue="Application.GetPlayListTracks" />
+        <item itemvalue="Application.ClientCredential" />
+        <item itemvalue="Application.Evelyn" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="234a62ba-43b4-4916-be24-4d75ce20ec73" name="Default Changelist" comment="" />
+      <created>1604455528151</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604455528151</updated>
+    </task>
+    <task id="LOCAL-00001" summary="evelyn first commit">
+      <created>1604727023708</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604727023708</updated>
+    </task>
+    <task id="LOCAL-00002" summary="evelyn first commit">
+      <created>1604727065272</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604727065272</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added joke and meme command">
+      <created>1604728695454</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1604728695454</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added settings">
+      <created>1604888945585</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604888945585</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added settings">
+      <created>1604889092312</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604889092312</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <MESSAGE value="evelyn first commit" />
+    <MESSAGE value="Added joke and meme command" />
+    <MESSAGE value="Added settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added settings" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="712" y="364" key="#Notifications" timestamp="1604726783587">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="712" y="364" key="#Notifications/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604726783587" />
+    <state x="440" y="114" key="#Project_Structure" timestamp="1604718714110">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="440" y="114" key="#Project_Structure/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604718714110" />
+    <state x="690" y="342" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604798866751">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="690" y="342" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604798866751" />
+    <state x="765" y="246" key="#com.intellij.ide.util.MemberChooser" timestamp="1604800650422">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="765" y="246" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604800650422" />
+    <state x="522" y="464" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1604504901056">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="522" y="464" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604504901056" />
+    <state x="743" y="409" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1604543507022">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="743" y="409" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604543507022" />
+    <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604885046992">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604885046992" />
+    <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604799398952">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604799398952" />
+    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1604872215287">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="740" y="294" key="FileChooserDialogImpl/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604872215287" />
+    <state x="838" y="438" key="Github.ShareDialog" timestamp="1604460940926">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="838" y="438" key="Github.ShareDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604460940926" />
+    <state x="691" y="245" key="Github.UntrackedFilesDialog" timestamp="1604460947225">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="691" y="245" key="Github.UntrackedFilesDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604460947225" />
+    <state width="1877" height="307" key="GridCell.Tab.0.bottom" timestamp="1604888126649">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="307" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604888126649" />
+    <state width="1877" height="307" key="GridCell.Tab.0.center" timestamp="1604888126649">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="307" key="GridCell.Tab.0.center/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604888126649" />
+    <state width="1877" height="307" key="GridCell.Tab.0.left" timestamp="1604888126649">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="307" key="GridCell.Tab.0.left/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604888126649" />
+    <state width="1877" height="307" key="GridCell.Tab.0.right" timestamp="1604888126649">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="307" key="GridCell.Tab.0.right/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604888126649" />
+    <state width="1877" height="363" key="GridCell.Tab.1.bottom" timestamp="1604591220747">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="363" key="GridCell.Tab.1.bottom/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604591220747" />
+    <state width="1877" height="363" key="GridCell.Tab.1.center" timestamp="1604591220747">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="363" key="GridCell.Tab.1.center/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604591220747" />
+    <state width="1877" height="363" key="GridCell.Tab.1.left" timestamp="1604591220747">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="363" key="GridCell.Tab.1.left/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604591220747" />
+    <state width="1877" height="363" key="GridCell.Tab.1.right" timestamp="1604591220747">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="363" key="GridCell.Tab.1.right/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604591220747" />
+    <state x="461" y="185" key="SettingsEditor" timestamp="1604857648336">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="461" y="185" key="SettingsEditor/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604857648336" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1604889164269">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604889164269" />
+    <state x="570" y="155" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604886097332">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="570" y="155" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604886097332" />
+    <state x="505" y="276" width="909" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1604554527446">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="505" y="276" width="909" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604554527446" />
+    <state x="551" y="150" key="new project wizard" timestamp="1604872218373">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="551" y="150" key="new project wizard/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604872218373" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/evelyn$Evelyn.ic" NAME="Evelyn Coverage Results" MODIFIED="1604506752690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>me.evelyn.*</FILTER>
+    </SUITE>
+  </component>
+</project>
