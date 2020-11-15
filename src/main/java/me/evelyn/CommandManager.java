@@ -10,6 +10,7 @@ import me.evelyn.command.commands.servermanagement.DeleteCommand;
 import me.evelyn.command.commands.servermanagement.KickCommand;
 import me.evelyn.command.commands.servermanagement.SetPrefixCommand;
 import me.evelyn.command.commands.servermanagement.ToggleFilterCommand;
+import me.evelyn.command.commands.spotifymusic.SpotifyPlayCommand;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
 import javax.annotation.Nullable;

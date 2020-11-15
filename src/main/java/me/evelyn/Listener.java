@@ -5,7 +5,7 @@ import me.evelyn.command.commands.events.DisconnectFromVC;
 import me.evelyn.command.commands.events.GuildMemberJoin;
 import me.evelyn.command.commands.events.GuildMemberLeave;
 import me.evelyn.database.SQLiteDataSource;
-import me.evelyn.spotify.ClientCredential;
+import me.evelyn.command.spotifyplayer.ClientCredential;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.ReadyEvent;
 import net.dv8tion.jda.api.events.guild.member.GuildMemberJoinEvent;
@@ -28,7 +28,20 @@ public class Listener extends ListenerAdapter {
     @Override
     public void onReady(@NotNull ReadyEvent event) {
         LOGGER.info("{} is ready", event.getJDA().getSelfUser().getAsTag());
-        ClientCredential.clientCredentials_Sync();
+        new Thread(new Runnable() {
+            public void run() {
+                ClientCredential.clientCredentials_Sync();
+                while (true) {
+                    try {
+                        Thread.sleep(3600000);
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                    }
+
+                    ClientCredential.clientCredentials_Sync();
+                }
+            }
+        }).start();
         event.getJDA().addEventListener(new EventManager(event));
         dc.Disconnect(event);
     }

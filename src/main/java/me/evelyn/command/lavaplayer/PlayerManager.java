@@ -41,7 +41,7 @@ public class PlayerManager {
         });
     }
 
-    public void loadAndPlay(String trackUrl, Boolean addToQueue, CommandContext ctx) {
+    public void loadAndPlay(String trackUrl, Boolean addToQueue, CommandContext ctx, Boolean spotifyPlay) {
         TextChannel channel = ctx.getChannel();
         final GuildMusicManager musicManager = this.getMusicManager(channel.getGuild());
 
@@ -49,6 +49,10 @@ public class PlayerManager {
             @Override
             public void trackLoaded(AudioTrack track) {
                 musicManager.scheduler.queue(track);
+
+                if(spotifyPlay)
+                    return;
+
                 if(addToQueue) {
                     final BlockingQueue<AudioTrack> queue = musicManager.scheduler.queue;
                     EmbedBuilder message = new EmbedBuilder().setColor(0xf7003e)

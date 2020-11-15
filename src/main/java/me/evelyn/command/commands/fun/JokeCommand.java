@@ -24,6 +24,12 @@ public class JokeCommand implements ICommand {
             final String title = data.get("title").asText();
             final String url = data.get("url").asText();
             final String body = data.get("body").asText();
+
+            if(body.length() > 2048){
+                handle(ctx);
+                return;
+            }
+
             final EmbedBuilder embed = EmbedUtils.getDefaultEmbed()
                     .setTitle(title, url)
                     .setDescription(body);

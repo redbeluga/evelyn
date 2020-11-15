@@ -7,21 +7,33 @@ import com.google.api.services.youtube.model.SearchResult;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 import me.evelyn.Config;
+import me.evelyn.Listener;
 import me.evelyn.command.CommandContext;
+import me.evelyn.command.HelperMethods;
 import me.evelyn.command.ICommand;
+import me.evelyn.command.commands.spotifymusic.SpotifyPlayCommand;
 import me.evelyn.command.lavaplayer.GuildMusicManager;
 import me.evelyn.command.lavaplayer.PlayerManager;
 import net.dv8tion.jda.api.entities.GuildVoiceState;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.TextChannel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.annotation.Nullable;
+import java.net.URISyntaxException;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class PlayCommand implements ICommand {
+    private static final Logger LOGGER = LoggerFactory.getLogger(Listener.class);
     private final YouTube youTube;
+    private static final String[] ytKeys = {
+            "youtube_key1",
+            "youtube_key2",
+            "youtube_key3"
+    };
 
     public PlayCommand(){
         YouTube temp = null;
@@ -70,7 +82,7 @@ public class PlayCommand implements ICommand {
         String link = String.join(" ", ctx.getArgs());
 
         if (!isUrl(link)) {
-            String ytSearched = searchYoutube(link);
+            String ytSearched = searchYoutube(link, ctx);
             if(ytSearched == null){
                 channel.sendMessage("I can't find that on YouTube.").queue();
                 return;
@@ -79,12 +91,25 @@ public class PlayCommand implements ICommand {
             link = ytSearched;
         }
 
+        else{
+            try {
+                if(HelperMethods.getHost(link).equalsIgnoreCase("open.spotify.com")){
+                    SpotifyPlayCommand sp = new SpotifyPlayCommand();
+                    sp.handle(ctx);
+                }
+            } catch (URISyntaxException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+
         final GuildMusicManager musicManager = PlayerManager.getInstance().getMusicManager(ctx.getGuild());
         final AudioPlayer audioPlayer = musicManager.audioPlayer;
         final AudioTrack track = audioPlayer.getPlayingTrack();
 
         PlayerManager.getInstance()
-                .loadAndPlay(link, track != null, ctx);
+                .loadAndPlay(link, track != null, ctx, false);
     }
 
 
@@ -106,28 +131,29 @@ public class PlayCommand implements ICommand {
     }
 
     @Nullable
-    private String searchYoutube(String input) {
-        try {
-            List<SearchResult> results = youTube.search()
-                    .list("id,snippet")
-                    .setQ(input)
-                    .setMaxResults(1L)
-                    .setType("video")
-                    .setFields("items(id/kind,id/videoId,snippet/title,snippet/thumbnails/default/url)")
-                    .setKey(Config.get("youtube_key"))
-                    .execute()
-                    .getItems();
+    private String searchYoutube(String input, CommandContext ctx) {
+        for (String key : ytKeys) {
+            try {
+                List<SearchResult> results = youTube.search()
+                        .list("id,snippet")
+                        .setQ(input)
+                        .setMaxResults(4L)
+                        .setType("video")
+                        .setFields("items(id/kind,id/videoId,snippet/title,snippet/thumbnails/default/url)")
+                        .setKey(Config.get(key))
+                        .execute()
+                        .getItems();
 
-            if (!results.isEmpty()) {
-                String videoId = results.get(0).getId().getVideoId();
+                if (!results.isEmpty()) {
 
-                return "https://www.youtube.com/watch?v=" + videoId;
+                    String videoId = results.get(0).getId().getVideoId();
+
+                    return "https://www.youtube.com/watch?v=" + videoId;
+                }
+            } catch (Exception e) {
+                LOGGER.error(ctx.getGuild().getName() + ": " + e.getMessage());
             }
-        } catch (Exception e) {
-            e.printStackTrace();
         }
-
         return null;
     }
-
 }

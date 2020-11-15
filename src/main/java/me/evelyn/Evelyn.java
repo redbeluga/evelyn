@@ -22,8 +22,7 @@ public class Evelyn {
                 .setColor(0xf7003e)
         );
 
-        JDABuilder.createDefault(
-                Config.get("token"),
+        JDABuilder.createDefault(Config.get("token"),
                 GatewayIntent.GUILD_MEMBERS,
                 GatewayIntent.GUILD_MESSAGES,
                 GatewayIntent.GUILD_VOICE_STATES

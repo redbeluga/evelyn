@@ -34,8 +34,6 @@ public class ShuffleCommand implements ICommand {
         final GuildMusicManager musicManager = PlayerManager.getInstance().getMusicManager(ctx.getGuild());
         final BlockingQueue<AudioTrack> queue = musicManager.scheduler.queue;
 
-        System.out.println(musicManager.scheduler.queue);
-
         if(queue.size() == 0){
             channel.sendMessage("There is nothing to shuffle. The queue is completely empty.").queue();
             return;
