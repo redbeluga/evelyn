@@ -2,21 +2,21 @@ package me.evelyn;
 
 import me.evelyn.command.CommandContext;
 import me.evelyn.command.ICommand;
+import me.evelyn.command.commands.botcommands.BlacklistCommand;
 import me.evelyn.command.commands.botcommands.PingCommand;
+import me.evelyn.command.commands.botcommands.WhitelistCommand;
+import me.evelyn.command.commands.fun.GoogleCommand;
 import me.evelyn.command.commands.fun.JokeCommand;
 import me.evelyn.command.commands.fun.MemeCommand;
 import me.evelyn.command.commands.music.*;
-import me.evelyn.command.commands.servermanagement.DeleteCommand;
-import me.evelyn.command.commands.servermanagement.KickCommand;
-import me.evelyn.command.commands.servermanagement.SetPrefixCommand;
-import me.evelyn.command.commands.servermanagement.ToggleFilterCommand;
-import me.evelyn.command.commands.spotifymusic.SpotifyPlayCommand;
+import me.evelyn.command.commands.servermanagement.*;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.regex.Pattern;
 
 public class CommandManager {
@@ -24,12 +24,15 @@ public class CommandManager {
 
     public CommandManager() {
         addCommand(new PingCommand());
+        addCommand(new BlacklistCommand());
+        addCommand(new WhitelistCommand());
 
         addCommand(new MemeCommand());
         addCommand(new JokeCommand());
 
         addCommand(new DeleteCommand());
         addCommand(new KickCommand());
+        addCommand(new GoogleCommand());
 
         addCommand(new PlayCommand());
         addCommand(new JoinCommand());
@@ -70,6 +73,11 @@ public class CommandManager {
     }
 
     void handle(GuildMessageReceivedEvent event, String prefix) {
+        if(Settings.BLACKLIST.contains(Objects.requireNonNull(event.getMember()).getIdLong())){
+            return;
+        }
+
+
         String[] split = event.getMessage().getContentRaw()
                 .replaceFirst("(?i)" + Pattern.quote(prefix), "")
                 .split("\\s+");

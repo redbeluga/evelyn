@@ -1,6 +1,7 @@
 package me.evelyn;
 
 import me.evelyn.command.commands.servermanagement.Filter;
+import me.evelyn.command.commands.servermanagement.FilterTroll;
 import net.dv8tion.jda.api.events.ReadyEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 

@@ -13,50 +13,27 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="234a62ba-43b4-4916-be24-4d75ce20ec73" name="Default Changelist" comment="Trying to fix some things">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/evelyn/command/commands/spotifymusic/SpotifyPlayCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/evelyn/command/spotifyplayer/GetPlayListTracks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="234a62ba-43b4-4916-be24-4d75ce20ec73" name="Default Changelist" comment="Made Spotify Music Commands">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/CommandManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/CommandManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/Evelyn.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/Evelyn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/Listener.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/Listener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/command/HelperMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/command/HelperMethods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/command/commands/events/GuildMemberJoin.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/command/commands/events/GuildMemberJoin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/command/commands/fun/JokeCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/command/commands/fun/JokeCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/EventManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/EventManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/Settings.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/Settings.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/command/commands/music/PlayCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/command/commands/music/PlayCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/command/commands/music/ShuffleCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/command/commands/music/ShuffleCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/command/commands/music/SpotifyPlayCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/command/lavaplayer/PlayerManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/command/lavaplayer/PlayerManager$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/command/lavaplayer/PlayerManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/command/lavaplayer/PlayerManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/spotify/ClientCredential.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/spotify/GetAlbumTracks.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/me/evelyn/spotify/GetPlayListTracks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/database.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/evelyn/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evelyn/CommandManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evelyn/Evelyn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evelyn/Evelyn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evelyn/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evelyn/Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evelyn/command/HelperMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evelyn/command/HelperMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evelyn/command/commands/events/GuildMemberJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evelyn/command/commands/events/GuildMemberJoin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evelyn/command/commands/fun/JokeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evelyn/command/commands/fun/JokeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evelyn/EventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evelyn/EventManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evelyn/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evelyn/Settings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/evelyn/command/commands/music/PlayCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evelyn/command/commands/music/PlayCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evelyn/command/commands/music/ShuffleCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evelyn/command/commands/music/ShuffleCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evelyn/command/commands/music/SpotifyPlayCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evelyn/command/lavaplayer/PlayerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evelyn/command/lavaplayer/PlayerManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evelyn/spotify/ClientCredential.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evelyn/command/spotifyplayer/ClientCredential.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evelyn/spotify/GetAlbumTracks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evelyn/command/spotifyplayer/GetAlbumTracks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evelyn/spotify/GetPlayListTracks.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +94,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -198,8 +175,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GetAlbumTracks" />
         <item itemvalue="Application.Evelyn" />
+        <item itemvalue="Application.GetAlbumTracks" />
         <item itemvalue="Application.GetTrackDuration" />
         <item itemvalue="Application.GetPlayListTracks" />
         <item itemvalue="Application.GetTrack" />
@@ -299,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604894151738</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Made Spotify Music Commands">
+      <created>1605400794062</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1605400794062</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -323,7 +307,8 @@
     <MESSAGE value="Added joke and meme command" />
     <MESSAGE value="Added settings" />
     <MESSAGE value="Trying to fix some things" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to fix some things" />
+    <MESSAGE value="Made Spotify Music Commands" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made Spotify Music Commands" />
   </component>
   <component name="WindowStateProjectService">
     <state x="712" y="364" key="#Notifications" timestamp="1604726783587">
@@ -338,10 +323,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="342" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604798866751" />
-    <state x="765" y="246" key="#com.intellij.ide.util.MemberChooser" timestamp="1604800650422">
+    <state x="765" y="246" key="#com.intellij.ide.util.MemberChooser" timestamp="1605802510515">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="765" y="246" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604800650422" />
+    <state x="765" y="246" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605802510515" />
     <state x="522" y="464" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1605330474552">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -358,10 +343,14 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604799398952" />
-    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1604872215287">
+    <state x="92" y="92" width="1736" height="896" key="DiffContextDialog" timestamp="1605802297980">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="740" y="294" key="FileChooserDialogImpl/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604872215287" />
+    <state x="92" y="92" width="1736" height="896" key="DiffContextDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605802297980" />
+    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1605726127512">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="740" y="294" key="FileChooserDialogImpl/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605726127512" />
     <state x="838" y="438" key="Github.ShareDialog" timestamp="1604460940926">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -370,50 +359,50 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="691" y="245" key="Github.UntrackedFilesDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604460947225" />
-    <state width="1877" height="194" key="GridCell.Tab.0.bottom" timestamp="1605333007127">
+    <state width="1877" height="363" key="GridCell.Tab.0.bottom" timestamp="1605805415251">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1357" height="284" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/0.0.1400.1050@0.0.1400.1050" timestamp="1605040431896" />
-    <state width="1877" height="194" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605333007127" />
-    <state width="1877" height="194" key="GridCell.Tab.0.center" timestamp="1605333007127">
+    <state width="1877" height="363" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605805415251" />
+    <state width="1877" height="363" key="GridCell.Tab.0.center" timestamp="1605805415251">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1357" height="284" key="GridCell.Tab.0.center/-1920.0.1920.1080/0.0.1400.1050@0.0.1400.1050" timestamp="1605040431896" />
-    <state width="1877" height="194" key="GridCell.Tab.0.center/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605333007127" />
-    <state width="1877" height="194" key="GridCell.Tab.0.left" timestamp="1605333007127">
+    <state width="1877" height="363" key="GridCell.Tab.0.center/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605805415251" />
+    <state width="1877" height="363" key="GridCell.Tab.0.left" timestamp="1605805415251">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1357" height="284" key="GridCell.Tab.0.left/-1920.0.1920.1080/0.0.1400.1050@0.0.1400.1050" timestamp="1605040431896" />
-    <state width="1877" height="194" key="GridCell.Tab.0.left/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605333007127" />
-    <state width="1877" height="194" key="GridCell.Tab.0.right" timestamp="1605333007127">
+    <state width="1877" height="363" key="GridCell.Tab.0.left/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605805415251" />
+    <state width="1877" height="363" key="GridCell.Tab.0.right" timestamp="1605805415251">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1357" height="284" key="GridCell.Tab.0.right/-1920.0.1920.1080/0.0.1400.1050@0.0.1400.1050" timestamp="1605040431896" />
-    <state width="1877" height="194" key="GridCell.Tab.0.right/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605333007127" />
-    <state width="1877" height="363" key="GridCell.Tab.1.bottom" timestamp="1605149607336">
+    <state width="1877" height="363" key="GridCell.Tab.0.right/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605805415251" />
+    <state width="1877" height="363" key="GridCell.Tab.1.bottom" timestamp="1605805415252">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.bottom/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605149607336" />
-    <state width="1877" height="363" key="GridCell.Tab.1.center" timestamp="1605149607336">
+    <state width="1877" height="363" key="GridCell.Tab.1.bottom/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605805415252" />
+    <state width="1877" height="363" key="GridCell.Tab.1.center" timestamp="1605805415251">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.center/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605149607336" />
-    <state width="1877" height="363" key="GridCell.Tab.1.left" timestamp="1605149607336">
+    <state width="1877" height="363" key="GridCell.Tab.1.center/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605805415251" />
+    <state width="1877" height="363" key="GridCell.Tab.1.left" timestamp="1605805415251">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.left/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605149607336" />
-    <state width="1877" height="363" key="GridCell.Tab.1.right" timestamp="1605149607336">
+    <state width="1877" height="363" key="GridCell.Tab.1.left/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605805415251" />
+    <state width="1877" height="363" key="GridCell.Tab.1.right" timestamp="1605805415251">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.right/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605149607336" />
-    <state x="461" y="185" key="SettingsEditor" timestamp="1604899292184">
+    <state width="1877" height="363" key="GridCell.Tab.1.right/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605805415251" />
+    <state x="461" y="185" key="SettingsEditor" timestamp="1605726133184">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="461" y="185" key="SettingsEditor/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604899292184" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1604894161530">
+    <state x="461" y="185" key="SettingsEditor/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605726133184" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1605400796816">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604894161530" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605400796816" />
     <state x="570" y="155" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604886097332">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -426,6 +415,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="551" y="150" key="new project wizard/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604872218373" />
+    <state x="733" y="414" width="621" height="283" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1605726132116">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="733" y="414" width="621" height="283" key="org.intellij.images.editor.actions.BackgroundImageDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605726132116" />
     <state x="616" y="250" key="run.anything.popup" timestamp="1604900886462">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -446,7 +439,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/evelyn$Evelyn.ic" NAME="Evelyn Coverage Results" MODIFIED="1605211981470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/evelyn$Evelyn.ic" NAME="Evelyn Coverage Results" MODIFIED="1605726161395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>me.evelyn.*</FILTER>
     </SUITE>
   </component>

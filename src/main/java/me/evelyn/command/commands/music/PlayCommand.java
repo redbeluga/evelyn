@@ -96,6 +96,7 @@ public class PlayCommand implements ICommand {
                 if(HelperMethods.getHost(link).equalsIgnoreCase("open.spotify.com")){
                     SpotifyPlayCommand sp = new SpotifyPlayCommand();
                     sp.handle(ctx);
+                    return;
                 }
             } catch (URISyntaxException e) {
                 e.printStackTrace();
@@ -107,7 +108,7 @@ public class PlayCommand implements ICommand {
         final GuildMusicManager musicManager = PlayerManager.getInstance().getMusicManager(ctx.getGuild());
         final AudioPlayer audioPlayer = musicManager.audioPlayer;
         final AudioTrack track = audioPlayer.getPlayingTrack();
-
+        
         PlayerManager.getInstance()
                 .loadAndPlay(link, track != null, ctx, false);
     }

@@ -2,3 +2,4 @@ shelf
 .idea
 .gradle
 build
+src/main/java/me/evelyn/command/commands/servermanagement/FilterTroll
