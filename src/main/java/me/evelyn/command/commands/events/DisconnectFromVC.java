@@ -1,6 +1,7 @@
 package me.evelyn.command.commands.events;
 
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
+import me.evelyn.command.lavaplayer.GuildMusicManager;
 import me.evelyn.command.lavaplayer.PlayerManager;
 import net.dv8tion.jda.api.events.ReadyEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -28,6 +29,9 @@ public class DisconnectFromVC extends ListenerAdapter {
                         }
                         if(PlayerManager.getInstance().getMusicManager(guild).audioPlayer.getPlayingTrack() == null){
                             audioManager.closeAudioConnection();
+                            final GuildMusicManager musicManager = PlayerManager.getInstance().getMusicManager(guild);
+                            musicManager.scheduler.player.stopTrack();
+                            musicManager.scheduler.queue.clear();
                         }
                     }
                 }
@@ -40,6 +44,9 @@ public class DisconnectFromVC extends ListenerAdapter {
                 if (audioManager.getConnectedChannel() != null) {
                     if (audioManager.getConnectedChannel().getMembers().size() == 1) {
                         audioManager.closeAudioConnection();
+                        final GuildMusicManager musicManager = PlayerManager.getInstance().getMusicManager(guild);
+                        musicManager.scheduler.player.stopTrack();
+                        musicManager.scheduler.queue.clear();
                     }
                 }
             });
@@ -48,7 +55,6 @@ public class DisconnectFromVC extends ListenerAdapter {
 
         Runnable checkwhetherinchannelalone = () -> {
             event.getJDA().getGuilds().forEach(guild -> {
-                boolean check = false;
                 final AudioPlayer audioPlayer = PlayerManager.getInstance().getMusicManager(guild).audioPlayer;
                 AudioManager audioManager = guild.getAudioManager();
                 if (audioManager.getConnectedChannel() != null) {
