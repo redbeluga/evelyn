@@ -4,6 +4,7 @@ import me.evelyn.command.CommandContext;
 import me.evelyn.command.ICommand;
 import me.evelyn.command.commands.botcommands.BlacklistCommand;
 import me.evelyn.command.commands.botcommands.PingCommand;
+import me.evelyn.command.commands.botcommands.SnipeCommand;
 import me.evelyn.command.commands.botcommands.WhitelistCommand;
 import me.evelyn.command.commands.fun.GoogleCommand;
 import me.evelyn.command.commands.fun.JokeCommand;
@@ -26,6 +27,7 @@ public class CommandManager {
         addCommand(new PingCommand());
         addCommand(new BlacklistCommand());
         addCommand(new WhitelistCommand());
+        addCommand(new SnipeCommand());
 
         addCommand(new MemeCommand());
         addCommand(new JokeCommand());

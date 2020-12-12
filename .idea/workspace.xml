@@ -15,7 +15,9 @@
   <component name="ChangeListManager">
     <list default="true" id="234a62ba-43b4-4916-be24-4d75ce20ec73" name="Default Changelist" comment="Made some new server commands">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/evelyn/command/commands/events/DisconnectFromVC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evelyn/command/commands/events/DisconnectFromVC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/database.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evelyn/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evelyn/CommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/evelyn/EventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/evelyn/EventManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -313,10 +315,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="342" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604798866751" />
-    <state x="765" y="246" key="#com.intellij.ide.util.MemberChooser" timestamp="1605802510515">
+    <state x="765" y="246" key="#com.intellij.ide.util.MemberChooser" timestamp="1607748399607">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="765" y="246" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605802510515" />
+    <state x="765" y="246" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1607748399607" />
     <state x="522" y="464" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1605330474552">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -349,26 +352,30 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="691" y="245" key="Github.UntrackedFilesDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604460947225" />
-    <state width="1877" height="363" key="GridCell.Tab.0.bottom" timestamp="1605805415251">
+    <state width="1877" height="219" key="GridCell.Tab.0.bottom" timestamp="1607754281470">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1357" height="284" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/0.0.1400.1050@0.0.1400.1050" timestamp="1605040431896" />
     <state width="1877" height="363" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605805415251" />
-    <state width="1877" height="363" key="GridCell.Tab.0.center" timestamp="1605805415251">
+    <state width="1877" height="219" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1607754281470" />
+    <state width="1877" height="219" key="GridCell.Tab.0.center" timestamp="1607754281470">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1357" height="284" key="GridCell.Tab.0.center/-1920.0.1920.1080/0.0.1400.1050@0.0.1400.1050" timestamp="1605040431896" />
     <state width="1877" height="363" key="GridCell.Tab.0.center/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605805415251" />
-    <state width="1877" height="363" key="GridCell.Tab.0.left" timestamp="1605805415251">
+    <state width="1877" height="219" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1607754281470" />
+    <state width="1877" height="219" key="GridCell.Tab.0.left" timestamp="1607754281470">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1357" height="284" key="GridCell.Tab.0.left/-1920.0.1920.1080/0.0.1400.1050@0.0.1400.1050" timestamp="1605040431896" />
     <state width="1877" height="363" key="GridCell.Tab.0.left/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605805415251" />
-    <state width="1877" height="363" key="GridCell.Tab.0.right" timestamp="1605805415251">
+    <state width="1877" height="219" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1607754281470" />
+    <state width="1877" height="219" key="GridCell.Tab.0.right" timestamp="1607754281470">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1357" height="284" key="GridCell.Tab.0.right/-1920.0.1920.1080/0.0.1400.1050@0.0.1400.1050" timestamp="1605040431896" />
     <state width="1877" height="363" key="GridCell.Tab.0.right/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605805415251" />
+    <state width="1877" height="219" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1607754281470" />
     <state width="1877" height="363" key="GridCell.Tab.1.bottom" timestamp="1605805415252">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
