@@ -5,13 +5,15 @@ import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class MsgCache extends ListenerAdapter {
     public static HashMap<Long, ArrayList<Msg>> msgCache = new HashMap<>();
     public static HashMap<Long, ArrayList<Msg>> deletedMsgCache = new HashMap<>();
-    private static int cacheSize = 10;
+    private static int cacheSize = 15;
 
     @Override
     public void onGuildMessageReceived(@NotNull GuildMessageReceivedEvent event) {
@@ -19,7 +21,7 @@ public class MsgCache extends ListenerAdapter {
             msgCache.put(event.getGuild().getIdLong(), new ArrayList<Msg>());
         }
 
-        msgCache.get(event.getGuild().getIdLong()).add(new Msg(event, event.getMessageIdLong(), event.getChannel().getIdLong()));
+        msgCache.get(event.getGuild().getIdLong()).add(new Msg(event, event.getMessageIdLong(), event.getChannel().getIdLong(), getTime()));
 
         ArrayList<Msg> same_tc_cache = new ArrayList<>();
         for(Msg message : msgCache.get(event.getGuild().getIdLong())){
@@ -60,6 +62,12 @@ public class MsgCache extends ListenerAdapter {
             }
             deletedMsgCache.get(guild_id).add(msg);
         }
+    }
+
+    private String getTime(){
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        return dtf.format(now);
     }
 }
 

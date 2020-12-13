@@ -7,11 +7,13 @@ public class Msg {
     private long msg_id;
     private long tc_id;
     private String content;
+    private String timeStamp;
 
-    public Msg(GuildMessageReceivedEvent event, long msg_id, long tc_id) {
+    public Msg(GuildMessageReceivedEvent event, long msg_id, long tc_id, String timeStamp) {
         this.event = event;
         this.msg_id = msg_id;
         this.tc_id = tc_id;
+        this.timeStamp = timeStamp;
         content = event.getMessage().getContentRaw();
     }
 
@@ -29,6 +31,10 @@ public class Msg {
 
     public String getContent() {
         return content;
+    }
+
+    public String getTimeStamp() {
+        return timeStamp;
     }
 }
 
