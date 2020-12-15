@@ -2,14 +2,16 @@ package me.evelyn.messagecache;
 
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
+import java.time.Instant;
+
 public class Msg {
     private GuildMessageReceivedEvent event;
     private long msg_id;
     private long tc_id;
     private String content;
-    private String timeStamp;
+    private Instant timeStamp;
 
-    public Msg(GuildMessageReceivedEvent event, long msg_id, long tc_id, String timeStamp) {
+    public Msg(GuildMessageReceivedEvent event, long msg_id, long tc_id, Instant timeStamp) {
         this.event = event;
         this.msg_id = msg_id;
         this.tc_id = tc_id;
@@ -33,7 +35,7 @@ public class Msg {
         return content;
     }
 
-    public String getTimeStamp() {
+    public Instant getTimeStamp() {
         return timeStamp;
     }
 }

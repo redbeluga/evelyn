@@ -10,6 +10,7 @@ import net.dv8tion.jda.api.entities.TextChannel;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -50,13 +51,13 @@ public class SnipeCommand implements ICommand {
 
         Member member = designatedMsg.getEvent().getMember();
         String messageContent = designatedMsg.getContent();
-        String time = designatedMsg.getTimeStamp();
+        Instant time = designatedMsg.getTimeStamp();
 
         EmbedBuilder snipe = new EmbedBuilder()
                 .setAuthor(member.getUser().getAsTag(), "https://www.youtube.com/watch?v=g0hUbEdCNeY", member.getUser().getAvatarUrl())
                 .setDescription(messageContent)
                 .setColor(0xf7003e)
-                .setFooter(formatTime(time));
+                .setTimestamp(time);
 
         channel.sendMessage(snipe.build()).queue();
     }
@@ -64,59 +65,5 @@ public class SnipeCommand implements ICommand {
     @Override
     public String getName() {
         return "snipe";
-    }
-
-    private String formatTime(String time){
-        String formattedTime = "";
-        String curDtfTime = getTime();
-        if(toDate(time).compareTo(toDate(curDtfTime)) == 0){
-            try {
-                SimpleDateFormat sdFormat= new SimpleDateFormat("hh:mm a");
-                SimpleDateFormat _24HourSDF = new SimpleDateFormat("HH:mm");
-                Date _24HourDt = _24HourSDF.parse(time.split(" ")[1].substring(0, 5));
-                if(sdFormat.format(_24HourDt).startsWith("0")){
-                    formattedTime = "Today at " + sdFormat.format(_24HourDt).substring(1);
-                }
-                else {
-                    formattedTime = "Today at " + sdFormat.format(_24HourDt);
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-        else{
-            try {
-                SimpleDateFormat sdFormat= new SimpleDateFormat("hh:mm a");
-                SimpleDateFormat _24HourSDF = new SimpleDateFormat("HH:mm");
-                Date _24HourDt = _24HourSDF.parse(time.split(" ")[1].substring(0, 5));
-                if(sdFormat.format(_24HourDt).startsWith("0")){
-                    formattedTime = time.split(" ")[0] + " " + sdFormat.format(_24HourDt).substring(1);
-                }
-                else {
-                    formattedTime = time.split(" ")[0] + " " + sdFormat.format(_24HourDt);
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
-        return formattedTime;
-    }
-
-    private Date toDate(String dtfTime){
-        SimpleDateFormat sdFormat = new SimpleDateFormat("yyyy/MM/dd");
-        try {
-            Date date = sdFormat.parse(dtfTime.split(" ")[0]);
-            return date;
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    private String getTime(){
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-        LocalDateTime now = LocalDateTime.now();
-        return dtf.format(now);
     }
 }
