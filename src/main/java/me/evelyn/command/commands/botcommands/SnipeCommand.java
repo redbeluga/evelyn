@@ -8,13 +8,8 @@ import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.TextChannel;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class SnipeCommand implements ICommand {
 
@@ -51,6 +46,11 @@ public class SnipeCommand implements ICommand {
 
         Member member = designatedMsg.getEvent().getMember();
         String messageContent = designatedMsg.getContent();
+        if(messageContent.equals("")){
+            channel.sendMessage("There is nothing to snipe").queue();
+            return;
+        }
+
         Instant time = designatedMsg.getTimeStamp();
 
         EmbedBuilder snipe = new EmbedBuilder()
@@ -65,5 +65,15 @@ public class SnipeCommand implements ICommand {
     @Override
     public String getName() {
         return "snipe";
+    }
+
+    @Override
+    public String getPackage() {
+        return getClass().getPackageName().split("\\.")[getClass().getPackageName().split("\\.").length-1];
+    }
+
+    @Override
+    public String getHelp() {
+        return "Gives the last deleted message in a text channel";
     }
 }

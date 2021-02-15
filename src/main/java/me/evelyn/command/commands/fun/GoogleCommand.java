@@ -21,4 +21,14 @@ public class GoogleCommand implements ICommand {
     public String getName() {
         return "google";
     }
+
+    @Override
+    public String getHelp() {
+        return "Gives the result of a Google search!";
+    }
+
+    @Override
+    public String getPackage() {
+        return getClass().getPackageName().split("\\.")[getClass().getPackageName().split("\\.").length-1];
+    }
 }

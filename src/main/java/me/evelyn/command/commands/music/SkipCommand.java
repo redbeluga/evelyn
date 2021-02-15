@@ -53,6 +53,15 @@ public class SkipCommand implements ICommand {
     }
 
     @Override
+    public String getHelp() {
+        return "Skips the current playing song.";
+    }
+
+    @Override
+    public String getPackage() {
+        return getClass().getPackageName().split("\\.")[getClass().getPackageName().split("\\.").length-1];
+    }
+    @Override
     public List<String> getAliases() {
         return List.of("skip", "s", "next");
     }

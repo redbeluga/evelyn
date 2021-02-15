@@ -43,4 +43,14 @@ public class JokeCommand implements ICommand {
     public String getName() {
         return "joke";
     }
+
+    @Override
+    public String getHelp() {
+        return "Sends a joke from Reddit!";
+    }
+
+    @Override
+    public String getPackage() {
+        return getClass().getPackageName().split("\\.")[getClass().getPackageName().split("\\.").length-1];
+    }
 }

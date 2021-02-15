@@ -2,10 +2,7 @@ package me.evelyn;
 
 import me.evelyn.command.CommandContext;
 import me.evelyn.command.ICommand;
-import me.evelyn.command.commands.botcommands.BlacklistCommand;
-import me.evelyn.command.commands.botcommands.PingCommand;
-import me.evelyn.command.commands.botcommands.SnipeCommand;
-import me.evelyn.command.commands.botcommands.WhitelistCommand;
+import me.evelyn.command.commands.botcommands.*;
 import me.evelyn.command.commands.fun.GoogleCommand;
 import me.evelyn.command.commands.fun.JokeCommand;
 import me.evelyn.command.commands.fun.MemeCommand;
@@ -28,6 +25,9 @@ public class CommandManager {
         addCommand(new BlacklistCommand());
         addCommand(new WhitelistCommand());
         addCommand(new SnipeCommand());
+//        addCommand(new SnipeImageCommand());
+        addCommand(new HelpCommand(this));
+        addCommand(new TestCommand());
 
         addCommand(new MemeCommand());
         addCommand(new JokeCommand());
@@ -49,6 +49,7 @@ public class CommandManager {
 
         addCommand(new SetPrefixCommand());
         addCommand(new ToggleFilterCommand());
+        addCommand(new ServerStatsCommand());
     }
 
     private void addCommand(ICommand cmd) {
@@ -62,7 +63,7 @@ public class CommandManager {
     }
 
     @Nullable
-    private ICommand getCommand(String search) {
+    public ICommand getCommand(String search) {
         String searchLower = search.toLowerCase();
 
         for (ICommand cmd : this.commands) {
@@ -72,6 +73,10 @@ public class CommandManager {
         }
 
         return null;
+    }
+
+    public List<ICommand> getCommands() {
+        return commands;
     }
 
     void handle(GuildMessageReceivedEvent event, String prefix) {

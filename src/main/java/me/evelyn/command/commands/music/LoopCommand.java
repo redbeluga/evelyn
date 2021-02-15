@@ -47,7 +47,16 @@ public class LoopCommand implements ICommand {
     }
 
     @Override
+    public String getHelp() {
+        return "Loops the queue";
+    }
+    @Override
     public List<String> getAliases() {
         return List.of("loop", "lq", "queueloop", "loopqueue", "qloop");
+    }
+
+    @Override
+    public String getPackage() {
+        return getClass().getPackageName().split("\\.")[getClass().getPackageName().split("\\.").length-1];
     }
 }

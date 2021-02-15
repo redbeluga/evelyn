@@ -6,8 +6,6 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
 
 import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -18,11 +16,24 @@ public class MsgCache extends ListenerAdapter {
 
     @Override
     public void onGuildMessageReceived(@NotNull GuildMessageReceivedEvent event) {
-        if(!msgCache.containsKey(event.getGuild().getIdLong())){
-            msgCache.put(event.getGuild().getIdLong(), new ArrayList<Msg>());
+        if(event.getMember().getUser().isBot()){
+            return;
         }
 
-        msgCache.get(event.getGuild().getIdLong()).add(new Msg(event, event.getMessageIdLong(), event.getChannel().getIdLong(), Instant.now()));
+        if(!msgCache.containsKey(event.getGuild().getIdLong())){
+            msgCache.put(event.getGuild().getIdLong(), new ArrayList<>());
+        }
+
+//        String attachmentUrl = null;
+//        if(!event.getMessage().getAttachments().isEmpty()){
+//            attachmentUrl = event.getMessage().getAttachments().get(0).getUrl();
+//        }
+
+//        msgCache.get(event.getGuild().getIdLong())
+//                .add(new Msg(event, event.getMessageIdLong(), event.getChannel().getIdLong(), Instant.now(), attachmentUrl));
+
+        msgCache.get(event.getGuild().getIdLong())
+                .add(new Msg(event, event.getMessageIdLong(), event.getChannel().getIdLong(), Instant.now()));
 
         ArrayList<Msg> same_tc_cache = new ArrayList<>();
         for(Msg message : msgCache.get(event.getGuild().getIdLong())){

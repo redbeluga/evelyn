@@ -17,6 +17,8 @@ import java.util.List;
 public class SetPrefixCommand implements ICommand {
     @Override
     public void handle(CommandContext ctx) {
+
+
         final TextChannel channel = ctx.getChannel();
         final List<String> args = ctx.getArgs();
         final Member member = ctx.getMember();
@@ -47,6 +49,11 @@ public class SetPrefixCommand implements ICommand {
         return "setprefix";
     }
 
+    @Override
+    public String getHelp() {
+        return "Changes the prefix used in the server";
+    }
+
     private void updatePrefix(long guildId, String newPrefix) {
         Settings.PREFIXES.put(guildId, newPrefix);
 
@@ -62,5 +69,10 @@ public class SetPrefixCommand implements ICommand {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public String getPackage() {
+        return getClass().getPackageName().split("\\.")[getClass().getPackageName().split("\\.").length-1];
     }
 }

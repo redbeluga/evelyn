@@ -76,4 +76,14 @@ public class KickCommand implements ICommand {
     public String getName() {
         return "kick";
     }
+
+    @Override
+    public String getHelp() {
+        return "Kicks specified user from the server.";
+    }
+
+    @Override
+    public String getPackage() {
+        return getClass().getPackageName().split("\\.")[getClass().getPackageName().split("\\.").length-1];
+    }
 }

@@ -20,4 +20,14 @@ public class PingCommand implements ICommand {
     public String getName() {
         return "ping";
     }
+
+    @Override
+    public String getHelp() {
+        return "Shows the current ping of Evelyn";
+    }
+
+    @Override
+    public String getPackage() {
+        return getClass().getPackageName().split("\\.")[getClass().getPackageName().split("\\.").length-1];
+    }
 }

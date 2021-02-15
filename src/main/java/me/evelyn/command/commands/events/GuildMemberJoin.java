@@ -9,11 +9,13 @@ import java.util.Random;
 
 public class GuildMemberJoin {
     private static String[] normalMessages = {
-            "Yo [member]. You finally came to [server]"
+            "Yo [member]. You finally came to [server]",
+            "I see you've finally decided to join [server], [member]."
     };
 
     private static String[] memberMessages = {
-            "Welcome to [server], Great Leader [member]."
+            "Welcome to [server], Great Leader [member].",
+            "It is always a pleasure to have you at [server], [member]-sama. "
     };
 
     public static void GuildMemberJoinEvent( GuildMemberJoinEvent event) {

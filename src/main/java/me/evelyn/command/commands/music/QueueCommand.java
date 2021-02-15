@@ -137,6 +137,16 @@ public class QueueCommand implements ICommand {
     }
 
     @Override
+    public String getHelp() {
+        return "Shows the current queue for the server.";
+    }
+
+    @Override
+    public String getPackage() {
+        return getClass().getPackageName().split("\\.")[getClass().getPackageName().split("\\.").length-1];
+    }
+
+    @Override
     public List<String> getAliases() {
         return List.of("queue", "q");
     }

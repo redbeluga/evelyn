@@ -38,4 +38,14 @@ public class BlacklistCommand implements ICommand {
     public String getName() {
         return "blacklist";
     }
+
+    @Override
+    public String getHelp() {
+        return "Stops a user from using Evelyn in the server";
+    }
+
+    @Override
+    public String getPackage() {
+        return getClass().getPackageName().split("\\.")[getClass().getPackageName().split("\\.").length-1];
+    }
 }

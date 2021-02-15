@@ -55,6 +55,16 @@ public class DisconnectCommand implements ICommand {
     }
 
     @Override
+    public String getHelp() {
+        return "Disconnects Evelyn from the voice channel";
+    }
+
+    @Override
+    public String getPackage() {
+        return getClass().getPackageName().split("\\.")[getClass().getPackageName().split("\\.").length-1];
+    }
+
+    @Override
     public List<String> getAliases() {
         return List.of("dc", "disconnect", "leave");
     }

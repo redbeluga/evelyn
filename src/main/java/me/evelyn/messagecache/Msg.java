@@ -5,11 +5,11 @@ import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import java.time.Instant;
 
 public class Msg {
-    private GuildMessageReceivedEvent event;
-    private long msg_id;
-    private long tc_id;
-    private String content;
-    private Instant timeStamp;
+    private final GuildMessageReceivedEvent event;
+    private final long msg_id;
+    private final long tc_id;
+    private final String content;
+    private final Instant timeStamp;
 
     public Msg(GuildMessageReceivedEvent event, long msg_id, long tc_id, Instant timeStamp) {
         this.event = event;

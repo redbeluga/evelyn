@@ -6,6 +6,8 @@ import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.requests.GatewayIntent;
+import net.dv8tion.jda.api.utils.ChunkingFilter;
+import net.dv8tion.jda.api.utils.MemberCachePolicy;
 import net.dv8tion.jda.api.utils.cache.CacheFlag;
 
 import javax.security.auth.login.LoginException;
@@ -33,8 +35,10 @@ public class Evelyn {
                         CacheFlag.CLIENT_STATUS
                 ))
                 .enableCache(CacheFlag.VOICE_STATE)
+                .setMemberCachePolicy(MemberCachePolicy.ALL)
+                .setChunkingFilter(ChunkingFilter.ALL)
                 .addEventListeners(new Listener())
-                .setActivity(Activity.playing("Music!"))
+                .setActivity(Activity.streaming("Netflix and Chill", "https://www.youtube.com/watch?v=g0hUbEdCNeY"))
                 .build();
     }
 

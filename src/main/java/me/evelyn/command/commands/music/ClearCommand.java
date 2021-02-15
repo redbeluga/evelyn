@@ -56,6 +56,16 @@ public class ClearCommand implements ICommand {
     }
 
     @Override
+    public String getHelp() {
+        return "Clears the entire queue";
+    }
+
+    @Override
+    public String getPackage() {
+        return getClass().getPackageName().split("\\.")[getClass().getPackageName().split("\\.").length-1];
+    }
+
+    @Override
     public List<String> getAliases() {
         return List.of("clear", "cl");
     }

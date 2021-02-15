@@ -7,6 +7,10 @@ public interface ICommand {
 
     String getName();
 
+    String getHelp();
+
+    String getPackage();
+
     default List<String> getAliases() {
         return List.of();
     }

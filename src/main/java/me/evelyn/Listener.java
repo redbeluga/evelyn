@@ -1,6 +1,7 @@
 package me.evelyn;
 
 import me.duncte123.botcommons.BotCommons;
+import me.evelyn.command.ICommand;
 import me.evelyn.command.commands.events.DisconnectFromVC;
 import me.evelyn.command.commands.events.GuildMemberJoin;
 import me.evelyn.command.commands.events.GuildMemberLeave;
@@ -19,6 +20,9 @@ import org.slf4j.LoggerFactory;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
+
+import static me.evelyn.command.AllICommands.*;
 
 public class Listener extends ListenerAdapter {
     private static final Logger LOGGER = LoggerFactory.getLogger(Listener.class);
@@ -27,6 +31,7 @@ public class Listener extends ListenerAdapter {
 
     @Override
     public void onReady(@NotNull ReadyEvent event) {
+        setAllCommands(manager);
         LOGGER.info("{} is ready", event.getJDA().getSelfUser().getAsTag());
         new Thread(new Runnable() {
             public void run() {
@@ -79,12 +84,12 @@ public class Listener extends ListenerAdapter {
 
     @Override
     public void onGuildMemberJoin(@NotNull GuildMemberJoinEvent event) {
-        GuildMemberJoin.GuildMemberJoinEvent(event);
+//        GuildMemberJoin.GuildMemberJoinEvent(event);
     }
 
     @Override
     public void onGuildMemberRemove(@NotNull GuildMemberRemoveEvent event) {
-        GuildMemberLeave.onGuildMemberRemove(event);
+//        GuildMemberLeave.onGuildMemberRemove(event);
     }
 
     private String getPrefix(long guildId) {
@@ -115,5 +120,48 @@ public class Listener extends ListenerAdapter {
         }
 
         return Config.get("prefix");
+    }
+
+    public static String publicGetPrefix(long guildId) {
+        try (final PreparedStatement preparedStatement = SQLiteDataSource
+                .getConnection()
+                // language=SQLite
+                .prepareStatement("SELECT prefix FROM guild_settings WHERE guild_id = ?")) {
+
+            preparedStatement.setString(1, String.valueOf(guildId));
+
+            try (final ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    return resultSet.getString("prefix");
+                }
+            }
+
+            try (final PreparedStatement insertStatement = SQLiteDataSource
+                    .getConnection()
+                    // language=SQLite
+                    .prepareStatement("INSERT INTO guild_settings(guild_id) VALUES(?)")) {
+
+                insertStatement.setString(1, String.valueOf(guildId));
+
+                insertStatement.execute();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return Config.get("prefix");
+    }
+
+    public static void setAllCommands(CommandManager manager) {
+        final List<ICommand> commands = manager.getCommands();
+
+        for(ICommand command : commands){
+            switch (command.getPackage()) {
+                case "servermanagement" -> servermanagement.add(command);
+                case "music" -> music.add(command);
+                case "fun" -> fun.add(command);
+                case "botcommands" -> botcommands.add(command);
+            }
+        }
     }
 }

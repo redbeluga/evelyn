@@ -73,6 +73,16 @@ public class RemoveCommand implements ICommand {
     }
 
     @Override
+    public String getHelp() {
+        return "Removes the specified song from the queue.";
+    }
+
+    @Override
+    public String getPackage() {
+        return getClass().getPackageName().split("\\.")[getClass().getPackageName().split("\\.").length-1];
+    }
+
+    @Override
     public List<String> getAliases() {
         return List.of("remove", "delete", "rm");
     }

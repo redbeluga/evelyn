@@ -1,6 +1,7 @@
 package me.evelyn.command.commands.servermanagement;
 
 import me.duncte123.botcommons.messaging.EmbedUtils;
+import me.evelyn.Config;
 import me.evelyn.Settings;
 import me.evelyn.command.CommandContext;
 import me.evelyn.command.ICommand;
@@ -16,8 +17,10 @@ public class ToggleFilterCommand implements ICommand {
         final Member member = ctx.getMember();
 
         if(!member.hasPermission(Permission.MANAGE_SERVER)) {
-            channel.sendMessage("Why are you trying to change this server setting? Pretty sus.").queue();
-            return;
+            if(!ctx.getMember().getId().equals(Config.get("owner_id"))) {
+                channel.sendMessage("Why are you trying to change this server setting? Pretty sus.").queue();
+                return;
+            }
         }
 
         final EmbedBuilder embed = EmbedUtils.getDefaultEmbed();
@@ -36,5 +39,15 @@ public class ToggleFilterCommand implements ICommand {
     @Override
     public String getName() {
         return "togglefilter";
+    }
+
+    @Override
+    public String getHelp() {
+        return "Turns the curse word filter on or off";
+    }
+
+    @Override
+    public String getPackage() {
+        return getClass().getPackageName().split("\\.")[getClass().getPackageName().split("\\.").length-1];
     }
 }

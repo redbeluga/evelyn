@@ -14,4 +14,14 @@ public class SearchCommand implements ICommand {
     public String getName() {
         return "search";
     }
+
+    @Override
+    public String getHelp() {
+        return "not finished yet!";
+    }
+
+    @Override
+    public String getPackage() {
+        return getClass().getPackageName().split("\\.")[getClass().getPackageName().split("\\.").length-1];
+    }
 }

@@ -34,4 +34,14 @@ public class MemeCommand implements ICommand {
     public String getName() {
         return "meme";
     }
+
+    @Override
+    public String getHelp() {
+        return "Sends a meme from Reddit!";
+    }
+
+    @Override
+    public String getPackage() {
+        return getClass().getPackageName().split("\\.")[getClass().getPackageName().split("\\.").length-1];
+    }
 }
